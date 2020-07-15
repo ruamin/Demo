@@ -28,4 +28,17 @@ public class TestGet extends BaseTest {
         }
         softAssertion.assertTrue(check);
     }
+    @Test
+    public void test_06(){
+        Response response=RequestData.getDes("London,uk");
+        softAssertion.assertEquals(200,response.getStatusCode());
+        List<Map<String, String>> jsonResponse = response.jsonPath().getList("weather");
+        boolean check =false;
+        for (Map<String, String> s: jsonResponse) {
+            if (s.get("description").contains("light intensity drizzle")) {
+                check = true;
+            }
+        }
+        softAssertion.assertTrue(check);
+    }
 }

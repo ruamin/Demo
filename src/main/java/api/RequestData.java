@@ -44,5 +44,9 @@ public class RequestData {
         Response response = RestAssured.delete(API_DEL,id);
         return response;
     }
-
+    public static Response getDes(String q)
+    {
+        Response response = RestAssured.get(API_GET_DES,q);
+        return response;
+    }
 }
