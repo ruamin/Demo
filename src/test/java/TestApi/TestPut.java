@@ -4,9 +4,7 @@ import Base.BaseTest;
 import api.RequestData;
 import constants.TestData;
 import models.Info;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

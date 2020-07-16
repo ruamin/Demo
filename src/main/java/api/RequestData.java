@@ -1,8 +1,10 @@
 package api;
 
+import constants.TestData;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import models.DataWeather;
 import models.Info;
 
 import static constants.Endpoints.*;
@@ -45,9 +47,14 @@ public class RequestData {
         Response response = RestAssured.delete(API_DEL, id);
         return response;
     }
-
-    public static Response getDes(String q) {
-        Response response = RestAssured.get(API_GET_DES, q);
+    public static Response getDes() {
+        DataWeather data=new DataWeather();
+        data.setQ(TestData.Q);
+        data.setAppid(TestData.APP_ID);
+        Response response = given()
+                .queryParam("q",data.getQ())
+                .queryParam("appid",data.getAppid())
+                .get(API_GET_DES);
         return response;
     }
 

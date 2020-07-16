@@ -24,4 +24,4 @@ public class TestPost extends BaseTest {
         softAssertion.assertEquals(f.getJob(), js.get("job"));
         softAssertion.assertAll();
     }
-}
+    }
