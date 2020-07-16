@@ -1,3 +1,5 @@
+package TestApi;
+
 import Base.BaseTest;
 import api.RequestData;
 import io.restassured.response.Response;

@@ -1,5 +1,5 @@
-TestPost.class
-TestDel.class
+TestApi\TestDel.class
 Base\BaseTest.class
-TestPut.class
-TestGet.class
+TestApi\TestPut.class
+TestApi\TestGet.class
+TestApi\TestPost.class

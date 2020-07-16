@@ -1,3 +1,5 @@
+package TestApi;
+
 import Base.BaseTest;
 import api.RequestData;
 import io.restassured.response.Response;
@@ -28,6 +30,7 @@ public class TestGet extends BaseTest {
         }
         softAssertion.assertTrue(check);
     }
+    //@Description("Hello")
     @Test
     public void test_06(){
         Response response=RequestData.getDes("London,uk");
@@ -40,5 +43,14 @@ public class TestGet extends BaseTest {
             }
         }
         softAssertion.assertTrue(check);
+        softAssertion.assertEquals(response.jsonPath().get("name"),"London");
+        softAssertion.assertAll();
     }
+//    @Test
+//    public void test_getProfile(){
+//        Response response = RequestData.getProfile();
+//        softAssertion.assertEquals(200,response.getStatusCode());
+//        softAssertion.assertEquals(response.jsonPath().get("data.kycStatus"),"rejected_temporarily");
+//        softAssertion.assertAll();
+//    }
 }

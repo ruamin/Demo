@@ -1,10 +1,11 @@
+package TestApi;
+
 import Base.BaseTest;
 import api.RequestData;
 import constants.TestData;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.Info;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 public class TestPost extends BaseTest {
